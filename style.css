@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: black;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+#Matrix {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    display: flex;
+    font-size: 3.2rem;
+    color: white;
+    font-family: Silkscreen;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1010px;
+    min-height: 100vh;
+    margin: 0 auto;
+    z-index: 1;
+    gap: 50px;
+}
+
+#box-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid white;
+    border-radius: 10px;
+    background-color: black;
+    width: 53%;       
+    padding: 50px;
+    gap: 40px;
+}
+
+
+#btn {
+    font-family: Silkscreen;
+    font-size:  1.8rem;
+    padding: 15px 20px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+#btn:hover {
+    background-color: rgb(39, 189, 39);
+    transform: scale(1.05);
+    
+}
+
+#btn:active {
+    transform: scale(0.90);
+}
+
+#copy-btn {
+    font-family: Silkscreen;
+    font-size: 1.8rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    
+}
+
+#copy-btn:hover {
+    background-color: rgb(39, 189, 39);
+    transform: scale(1.05);
+    
+}
+
+#copy-btn:active {
+    transform: scale(0.90);
+}
+
+
+#text-copy {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+
+}
+
+#Label {
+    font-size: 3rem;
+    color: white;
+    min-height: 1.2em;
+    width: 100%;
+}
+
+
+
+#instruction-text {
+    font-family: Silkscreen;
+    color: rgb(39, 189, 39);
+    font-size: 1.8rem;
+    opacity: 80%;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+
+@media (max-width: 768px) {
+    #box-wrapper {
+        width: 70%;
+    }
+    
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    #box-wrapper {
+        width: 90%;
+        padding: 25px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    
+    #Label {
+        font-size: 2rem;
+    }
+    
+    #btn {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+    
+    #copy-btn {
+        font-size: 1.3rem;
+        padding: 5px 10px;
+    }
+    
+    #instruction-text {
+        font-size: 1rem;
+    }
+}
+
+
