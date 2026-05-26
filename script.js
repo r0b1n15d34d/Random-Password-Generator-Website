@@ -10,14 +10,16 @@ const context = canvas.getContext("2d");
 // for generating the password
 const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*'; 
 let password = "";
-let char = ""
+
 
 function generatePassword() {
 	instructionText.style.display = 'none';
 
     password = ""
      for (let i = 0; i < 12; i++) {
-        char = Math.floor(Math.random() * characters.length)
+        const arr = new Uint32Array(1);
+		crypto.getRandomValues(arr);
+		char = arr[0] % characters.length;
         password += characters[char]   
     }
 
